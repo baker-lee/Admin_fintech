@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.admin_fintech.mapper.MemberMapper">
+    <select id="SelectMember" resultType="com.example.admin_fintech.member.dto.Member">
+        SELECT
+            email,
+            name,
+            phone,
+            address,
+            detail,
+            indate
+        FROM
+            member
+    </select>
+
+</mapper>
