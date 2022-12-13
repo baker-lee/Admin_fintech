@@ -24,4 +24,5 @@ public class IndexService {
     public int CntContact(){
         return ir.CntContact();
     }
+
 }

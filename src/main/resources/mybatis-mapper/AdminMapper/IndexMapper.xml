@@ -2,28 +2,28 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.example.admin_fintech.mapper.IndexMapper">
-    <select id="CntMember" parameterType="com.example.admin_fintech.member.dto.Member" resultType="int">
+    <select id="CntMember" resultType="int">
         SELECT
             count(email)
         FROM
             member
     </select>
 
-    <select id="AmountPayment" parameterType="com.example.admin_fintech.payment.dto.Payment" resultType="double">
+    <select id="AmountPayment" resultType="double">
         SELECT
-            SUM(total)
+            sum(amount)
         FROM
             payment
     </select>
 
-    <select id="CntBuy" parameterType="com.example.admin_fintech.buy.dto.Buy" resultType="int">
+    <select id="CntBuy"  resultType="int">
         SELECT
             count(id)
         FROM
             buy
     </select>
 
-    <select id="CntContact" parameterType="com.example.admin_fintech.contact.dto.Contact" resultType="int">
+    <select id="CntContact" resultType="int">
         SELECT
             count(id)
         FROM

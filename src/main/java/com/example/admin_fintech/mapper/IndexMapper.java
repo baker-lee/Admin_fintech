@@ -13,4 +13,5 @@ public interface IndexMapper {
     public int CntBuy();
 
     public int CntContact();
+
 }

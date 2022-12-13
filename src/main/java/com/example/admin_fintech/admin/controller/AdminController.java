@@ -18,12 +18,13 @@ public class AdminController {
     AdminService as;
 
     @PostMapping("/login")
-    public String login(@RequestParam HashMap<String, Object> params, HttpSession httpSession) {
-        AdminDto veryfied = as.login(adminDto);
-        if(veryfied !=null) {
-            String id = String.valueOf(veryfied.getId());
+    public String login(AdminDto params, HttpSession httpSession) {
+        AdminDto result = as.login(params);
+        if(result !=null) {
+            String id = result.getId();
             httpSession.setAttribute("id", id);
+            return "redirect:/index";
         }
-        return "redirect:/index";
+        return "redirect:/";
     }
 }

@@ -26,4 +26,5 @@ public class IndexRepository {
     public int CntContact(){
         return mapper.CntContact();
     }
+
 }

@@ -4,8 +4,9 @@ package com.example.admin_fintech.index.controller;
 import com.example.admin_fintech.index.service.IndexService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpSession;
 
 @RestController
 public class IndexController {
@@ -32,5 +33,6 @@ public class IndexController {
     public int CntContact(){
         return is.CntContact();
     }
+
 
 }
