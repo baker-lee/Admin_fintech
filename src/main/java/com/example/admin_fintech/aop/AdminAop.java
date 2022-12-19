@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 @Aspect
 public class AdminAop {
 
-    @Pointcut("execution(* com.example.admin_fintech..*.Select*(..))")
+    @Pointcut("execution(* com.example.admin_fintech.*.controller..*.Select*(..))")
     public void cut(){}
 
     @Around("cut()")
@@ -28,4 +28,6 @@ public class AdminAop {
             return joinPoint.proceed();
         }
     }
+
+
 }
